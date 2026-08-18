@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "circuit_breaker_implementation.md",
+                "file": "Kafka Integration Documentation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "circuit_breaker_implementation"
+              "title": "Kafka Integration Documentation"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "circuit_breaker_implementation.md",
+                "file": "Kafka Integration Documentation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "circuit_breaker_implementation.md",
+                "file": "Kafka Integration Documentation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "circuit_breaker_implementation.md",
+                "file": "Kafka Integration Documentation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -189,5 +189,8 @@
     }
   },
   "active": "9565baac2d82bef9",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "circuit_breaker_implementation.md",
+    "Kafka Integration Documentation.md"
+  ]
 }
