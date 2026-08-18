@@ -2,6 +2,8 @@ package com.sarvu.bigkart;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class BigkartApplication {
@@ -10,4 +12,8 @@ public class BigkartApplication {
 		SpringApplication.run(BigkartApplication.class, args);
 	}
 
+	@Bean
+	public RestTemplate restTemplate() {
+		return new RestTemplate();
+	}
 }
