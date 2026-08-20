@@ -45,7 +45,7 @@ We created a dedicated service layer to handle communication with the `bigkart_a
 - **Circuit Breaker Logic:** We annotated this method with `@CircuitBreaker(name = "adminService", fallbackMethod = "adminServiceFallback")`.
 - **Fallback Method:** We defined `adminServiceFallback(Exception e)`. If `bigkart_admin` is down or times out, this method executes immediately (or intercepts open-circuit calls) to return a safe fallback message: `"Admin service is currently down. Please try again later. (Fallback Response)"`.
 
-## 4. Configured `RestTemplate` (`BigkartApplication.java`)
+## 4. Configured `RestTemplate` (`BigkartCustomerApplication.java`)
 `RestTemplate` is not auto-configured by default in a way that we can just inject it. So, we defined a `@Bean` method returning `new RestTemplate()` in the main application class. This makes it available for auto-wiring inside `AdminServiceClient`.
 
 ## 5. Exposed a Test Endpoint (`HelloController.java`)

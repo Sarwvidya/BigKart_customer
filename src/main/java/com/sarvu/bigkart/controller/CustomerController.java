@@ -13,6 +13,11 @@ public class CustomerController {
     private KafkaConsumerService kafkaConsumerService;
 
     @GetMapping("/")
+    public String showIndexPage() {
+        return "index";
+    }
+
+    @GetMapping("/kafka-test")
     public String showCustomerPage() {
         return "customer-kafka";
     }
