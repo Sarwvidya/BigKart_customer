@@ -9,12 +9,8 @@ public class KafkaConsumerService {
     private int currentNumber = 0;
 
     @KafkaListener(topics = "increment-topic", groupId = "bigkart-customer-group")
-    public void consumeNumber(String message) {
-        try {
-            this.currentNumber = Integer.parseInt(message);
-        } catch (NumberFormatException e) {
-            System.err.println("Received invalid number format: " + message);
-        }
+    public void consumeNumber(int message) {
+        this.currentNumber = message;
     }
 
     public int getCurrentNumber() {
