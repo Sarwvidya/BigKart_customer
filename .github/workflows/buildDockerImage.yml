@@ -2,7 +2,15 @@ name: Build and Push Docker Image
 
 on:
   push:
+    tags:
+      - 'v*'
 
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Docker image tag'
+        required: true
+        type: string
 
 jobs:
   build-and-push:
@@ -40,5 +48,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/bigkart_customer:${{ github.sha }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/bigkart_customer:${{ github.event.inputs.tag || github.ref_name }}
